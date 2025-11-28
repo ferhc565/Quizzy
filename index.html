@@ -34,7 +34,36 @@
 
   <main class="main">
     <section class="card">
-      <div id="quiz-container">
+      <!-- PANTALLA INICIAL -->
+      <div id="start-screen">
+        <h2>Elige una categoría</h2>
+        <p class="start-text">
+          Selecciona el tipo de preguntas con el que quieres practicar.
+        </p>
+
+        <div class="category-grid">
+          <button class="cat-btn" data-category="mix">
+            🔀 Mezcla general
+          </button>
+          <button class="cat-btn" data-category="math">
+            ➗ Matemáticas
+          </button>
+          <button class="cat-btn" data-category="tech">
+            💻 Tecnología
+          </button>
+        </div>
+
+        <button id="start-btn" class="btn start-btn" disabled>
+          Iniciar juego
+        </button>
+
+        <button id="config-btn" class="ghost-btn">
+          ⚙️ Configuración
+        </button>
+      </div>
+
+      <!-- PANTALLA DE QUIZ -->
+      <div id="quiz-container" class="hidden">
         <h2 id="question">Cargando pregunta...</h2>
         <div id="options"></div>
         <button id="next-btn" class="btn" disabled>Siguiente</button>
@@ -42,10 +71,22 @@
         <p id="score"></p>
       </div>
 
+      <!-- RESULTADO -->
       <div id="result-container" class="hidden">
         <h2>Resultado</h2>
         <p id="final-score"></p>
-        <button id="restart-btn" class="btn">Jugar otra vez</button>
+        <button id="restart-btn" class="btn">Volver al menú</button>
+      </div>
+
+      <!-- MODAL CONFIGURACIÓN SIMPLE -->
+      <div id="config-modal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Configuración</h3>
+          <p class="modal-text">
+            Próximamente podrás ajustar dificultad, sonidos y más.
+          </p>
+          <button id="close-config-btn" class="btn small-btn">Cerrar</button>
+        </div>
       </div>
     </section>
   </main>
